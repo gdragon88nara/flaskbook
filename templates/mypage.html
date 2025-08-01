@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지 - Flaskgram</title>
+    <style>
+        body {
+            background-color: #fafafa;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .profile-box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+        }
+        .username {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .logout {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #efefef;
+            color: #262626;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-box">
+        <div class="username">{{ username }} 님, 환영합니다!</div>
+        <p>여기는 Flaskgram 마이페이지입니다.</p>
+        <a class="logout" href="{{ url_for('logout') }}">로그아웃</a>
+    </div>
+</body>
+</html>
